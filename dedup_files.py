@@ -41,6 +41,7 @@ def parse_args():
 
     if len(argv) >= 3:
         if argv[2] == "-r":
+            global remove_files
             remove_files = True
 
 def build_file_table():
@@ -89,6 +90,6 @@ def main():
         if remove_files:
             delete_duplicate_files()
     else:
-        print(f"No duplicate files found in target directory: {target_directory}.")
+        print(f"No duplicate files found in target directory: '{target_directory}'")
 
 main()
